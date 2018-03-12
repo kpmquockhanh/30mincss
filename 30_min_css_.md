@@ -102,21 +102,20 @@ Ensures that an element self-clears its children.
 
 #### Giải thích
 
-1. `.clearfix::after` defines a pseudo-element.
-2. `content: ''` allows the pseudo-element to affect layout.
-3. `clear: both` indicates that the left, right or both sides of the element cannot be adjacent
-   to earlier floated elements within the same block formatting context.
+1. `.clearfix::after` định nghĩa một element giả.
+2. `content: ''` cho phép các element giả để ảnh hưởng đến layout.
+3. `clear: both` chỉ ra rằng phía trái, phải hoặc cả 2 phía của phần tử không thẻ được lền kề phần tử đã float  mà không cùng một bối cảnh format block._(nghe hơi chuối :|)_
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
-<span class="snippet__support-note">⚠️ For this snippet to work properly you need to ensure that there are no non-floating children in the container and that there are no tall floats before the clearfixed container but in the same formatting context (e.g. floated columns).</span>
+<span class="snippet__support-note">⚠️ Để đoạn mã này hoạt động đúng bạn cần đảm bảo rằng không có phần tử con nào trong container và không có float trước khi có container rõ ràng trong cùng bối cảnh định dạng (ví dụ floated columns).</span>
 
 <!-- tags: layout -->
 
-### Constant width to height ratio
+### Hằng tỉ lệ width/height
 
-Given an element of variable width, it will ensure its height remains proportionate in a responsive fashion
-(i.e., its width to height ratio remains constant).
+Cho một phàn tử có width biến đổi, nó sẽ đảm bảo chiều cao của nó vẫn tương xứng theo một kiểu phù hợp
+(i.e., tỉ lệ chiều rộng chiều cao không đổi).
 
 #### HTML
 
@@ -146,7 +145,7 @@ Given an element of variable width, it will ensure its height remains proportion
 
 #### Demo
 
-Resize your browser window to see the proportion of the element remain the same.
+Thay đổi kích thước cửa sổ trình duyệt của bạn để xem tỷ lệ phần tử vẫn giữ nguyên.
 
 <div class="snippet-demo">
   <div class="snippet-demo__constant-width-to-height-ratio"></div>
@@ -170,23 +169,21 @@ Resize your browser window to see the proportion of the element remain the same.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-`padding-top` on the `::before` pseudo-element causes the height of the element to equal a percentage of
-its width. `100%` therefore means the element's height will always be `100%` of the width, creating a responsive
-square.
+`padding-top` trên `::before` của phần tử giả là nguyên nhân height of phần tử để bằng một phần trăm chiều rộng của nó. Do đó `100%` có nghĩa là chiều cao của phần tử sẽ luôn là  `100%`  chiều rộng, tạo ra một hình vuông responsive.
 
-This method also allows content to be placed inside the element normally.
+Phương pháp này cũng cho phép nội dung được đặt bên trong phần tử bình thường.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 <!-- tags: layout -->
 
-### Evenly distributed children
+### Phân phối đền phần tử con
 
-Evenly distributes child elements within a parent element.
+Phân phối đều các phần tử con trong phần tử cha.
 
 #### HTML
 
@@ -225,16 +222,17 @@ Evenly distributes child elements within a parent element.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `display: flex` enables flexbox.
-2. `justify-content: space-between` evenly distributes child elements horizontally. The first item is positioned at the left edge, while the last item is positioned at the right edge.
+1. `display: flex` cho phép flexbox.
+2. `justify-content: space-between` phân bố đều các phần tử con theo chiều ngang. Mục đầu tiên của anh ta được đặt ở cạnh trái, trong khi mục cuối cùng được đặt ở cạnh bên phải.
+EXTENSION OPTIONS
 
-Alternatively, use `justify-content: space-around` to distribute the children with space around them, rather than between them.
+Ngoài ra, hãy sử dụng `justify-content: space-around`  để phân phối phần tử con có không gian xung quanh chúng, chứ không phải giữa chúng.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Needs prefixes for full support.</span>
+<span class="snippet__support-note">⚠️ Cần tiền tố để được hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=flexbox
 
@@ -242,7 +240,7 @@ Alternatively, use `justify-content: space-around` to distribute the children wi
 
 ### Flexbox centering
 
-Horizontally and vertically centers a child element within a parent element using `flexbox`.
+Căn giữa theo chiều ngang và dọc phần tử con bên trong phần tử cha sử dụng `flexbox`.
 
 #### HTML
 
@@ -266,7 +264,7 @@ Horizontally and vertically centers a child element within a parent element usin
 
 <div class="snippet-demo">
   <div class="snippet-demo__flexbox-centering">
-    <p class="snippet-demo__flexbox-centering__child">Centered content.</p>
+    <p class="snippet-demo__flexbox-centering__child">Nội dung chính giữa.</p>
   </div>
 </div>
 
@@ -279,23 +277,23 @@ Horizontally and vertically centers a child element within a parent element usin
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `display: flex` enables flexbox.
-2. `justify-content: center` centers the child horizontally.
-3. `align-items: center` centers the child vertically.
+1. `display: flex` cho phép flexbox.
+2. `justify-content: center` căn giữa phần tử con theo chiều dọc.
+3. `align-items: center` căn giữa phần tử con theo chiều ngang.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Needs prefixes for full support.</span>
+<span class="snippet__support-note">⚠️ Cần tiền tố đề được hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=flexbox
 
 <!-- tags: layout -->
 
-### Grid centering
+### Căn giữa grid
 
-Horizontally and vertically centers a child element within a parent element using `grid`.
+Căn giữa theo chiều ngang và dọc phần tử con bên trong phần tử cha sử dụng `grid`.
 
 #### HTML
 
@@ -334,21 +332,21 @@ Horizontally and vertically centers a child element within a parent element usin
 
 #### Explanation
 
-1. `display: grid` enables grid.
-2. `justify-content: center` centers the child horizontally.
-3. `align-items: center` centers the child vertically.
+1. `display: grid` cho phép flexbox.
+2. `justify-content: center` căn giữa phần tử con theo chiều dọc.
+3. `align-items: center` căn giữa phần tử con theo chiều ngang.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 * https://caniuse.com/#feat=css-grid
 
 <!-- tags: layout -->
 
-### Grid layout
+### Layout grid
 
-Basic website layout using `grid`.
+Website cơ bản sử dụng `grid`.
 
 #### HTML
 
@@ -440,30 +438,30 @@ Basic website layout using `grid`.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `display: grid` enables grid.
-2. `grid-gap: 10px` defines spacing between the elements.
-3. `grid-template-columns: repeat(3, 1fr)` defines 3 columns of the same size.
-4. `grid-template-areas` defines the names of grid areas.
-5. `grid-area: sidebar` makes the element use the area with the name `sidebar`.
+1. `display: grid` cho phép grid.
+2. `grid-gap: 10px` đinh nghĩa khoảng cách giữa các phần tử.
+3. `grid-template-columns: repeat(3, 1fr)` định nghĩa 3 cột cùng kích thước.
+4. `grid-template-areas` định nghĩa tên các khu vực grid.
+5. `grid-area: sidebar` làm cho phần tử sử dụng vùng có tên `sidebar`.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 * https://caniuse.com/#feat=css-grid
 
 <!-- tags: layout -->
 
-### Truncate text
+### Cắt bớt văn bản
 
-If the text is longer than one line, it will be truncated and end with an ellipsis `…`.
+Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết thúc bằng một dấu chấm phẩy `…`.
 
 #### HTML
 
 ```html
-<p class="truncate-text">If I exceed one line's width, I will be truncated.</p>
+<p class="truncate-text">Nếu tôi vượt quá chiều rộng của một dòng, tôi sẽ bị cắt ngắn.</p>
 ```
 
 #### CSS
@@ -481,7 +479,7 @@ If the text is longer than one line, it will be truncated and end with an ellips
 
 <div class="snippet-demo">
   <p class="snippet-demo__truncate-text">
-    This text will be truncated if it exceeds 200px in width.
+    Văn bản này sẽ bị cắt ngắn nếu chiều rộng vượt quá 200px.
   </p>
 </div>
 
@@ -495,26 +493,25 @@ If the text is longer than one line, it will be truncated and end with an ellips
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `overflow: hidden` prevents the text from overflowing its dimensions
-   (for a block, 100% width and auto height).
-2. `white-space: nowrap` prevents the text from exceeding one line in height.
+1. `overflow: hidden` ngăn văn bản tràn lên kích thước của nó (đối với block, 100% width và auto height).
+2. `white-space: nowrap` ngăn văn bản vượt quá một chiều cao.
 3. `text-overflow: ellipsis` makes it so that if the text exceeds its dimensions, it
    will end with an ellipsis.
-4. `width: 200px;` ensures the element has a dimension, to know when to get ellipsis
+4. `width: 200px;` đảm bảo rằng phần tử có một kích thước, để biết khi nào cần dấu chấm phẩy.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Only works for single line elements.</span>
+<span class="snippet__support-note">⚠️ Chỉ hoạt động cho các phần tử trên một dòng.</span>
 
 * https://caniuse.com/#feat=text-overflow
 
 <!-- tags: layout -->
 
-### Circle
+### Vòng tròn
 
-Creates a circle shape with pure CSS.
+Tạo hình tròn với thuần CSS.
 
 #### HTML
 
@@ -548,24 +545,23 @@ Creates a circle shape with pure CSS.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-`border-radius: 50%` curves the borders of an element to create a circle.
+`border-radius: 50%` bẻ cong viền của một phần tử để tạo ra một vòng tròn.
 
-Since a circle has the same radius at any given point, the `width` and `height` must be the same. Differing
-values will create an ellipse.
+Vì một vòng tròn có cùng bán kính tại bất kỳ điểm cho trước, `width` và `height` phải gioongsn hau. Các giá trị khác nhau sẽ tạo ra một hình elip.
 
 #### Browser support
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 * https://caniuse.com/#feat=border-radius
 
 <!-- tags: visual -->
 
-### Custom scrollbar
+### Thanh cuộn tùy chỉnh
 
-Customizes the scrollbar style for the document and elements with scrollable overflow, on WebKit platforms.
+Tùy chỉnh scrollbar cho tài liệu và các phần tử với scrollable overflow (tràn có thể cuộn), trên nền tảng WebKit.
 
 #### HTML
 
@@ -632,15 +628,15 @@ Customizes the scrollbar style for the document and elements with scrollable ove
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `::-webkit-scrollbar` targets the whole scrollbar element.
-2. `::-webkit-scrollbar-track` targets only the scrollbar track.
-3. `::-webkit-scrollbar-thumb` targets the scrollbar thumb.
+1. `::-webkit-scrollbar` nhắm tới toàn bộ thanh scrollbar.
+2. `::-webkit-scrollbar-track` chỉ nhắm tới scrollbar track.
+3. `::-webkit-scrollbar-thumb` nhắm tới scrollbar thumb.
 
-There are many other pseudo-elements that you can use to style scrollbars. For more info, visit the [WebKit Blog](https://webkit.org/blog/363/styling-scrollbars/)
+Có rất nhiều yếu tố giả khác mà bạn có thể sử dụng để tạo kiểu thanh cuộn. Để biết thêm thông tin, vào [WebKit Blog](https://webkit.org/blog/363/styling-scrollbars/)
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
 <span class="snippet__support-note">⚠️ Scrollbar styling doesn't appear to be on any standards track.</span>
 
