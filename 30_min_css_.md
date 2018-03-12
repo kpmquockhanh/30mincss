@@ -638,20 +638,20 @@ Có rất nhiều yếu tố giả khác mà bạn có thể sử dụng để t
 
 #### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Scrollbar styling doesn't appear to be on any standards track.</span>
+<span class="snippet__support-note">⚠️ Kiểu dáng thanh cuộn dường như không xuất hiện trên bất kỳ bài hát tiêu chuẩn nào.</span>
 
 * https://caniuse.com/#feat=css-scrollbar
 
 <!-- tags: visual -->
 
-### Custom text selection
+### Lựa chọn văn bản tùy chọn
 
-Changes the styling of text selection.
+Thay đổi kiểu dáng của văn bản chọn lựa. ?????
 
 #### HTML
 
 ```html
-<p class="custom-text-selection">Select some of this text.</p>
+<p class="custom-text-selection">Chọn một vài văn bản này.</p>
 ```
 
 #### CSS
@@ -670,7 +670,7 @@ Changes the styling of text selection.
 #### Demo
 
 <div class="snippet-demo">
-  <p class="snippet-demo__custom-text-selection">Select some of this text.</p>
+  <p class="snippet-demo__custom-text-selection">Chọn một vài văn bản này.</p>
 </div>
 
 <style>
@@ -684,22 +684,21 @@ Changes the styling of text selection.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-`::selection` defines a pseudo selector on an element to style text within it when selected. Note that if you don't combine any other selector your style will be applied at document root level, to any selectable element.
+`::selection` đhịnh nghĩa một selector giả trên một phần tử định kiểu văn bản bên trong nó khi được chọn. Lưu ý rằng nếu bạn không kết hợp bất kỳ selector khác, style của bạn sẽ được áp dụng ở cấp gốc, cho bất kỳ phần tử có thể lựa chọn nào.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Requires prefixes for full support and is not actually
-in any specification.</span>
+<span class="snippet__support-note">⚠️ Yêu cầu tiền tố để được hỗ trợ đầy đủ và không thực sự đúng trong tất cả trường hợp đặc biệt.</span>
 
 * https://caniuse.com/#feat=css-selection
 
 <!-- tags: visual -->
 
-### Dynamic shadow
+### Đổ bóng động
 
-Creates a shadow similar to `box-shadow` but based on the colors of the element itself.
+Tạo một bóng tối tương tự như `box-shadow` nhưng dựa trên màu sắc của chính phần tử đó.
 
 #### HTML
 
@@ -767,13 +766,12 @@ Creates a shadow similar to `box-shadow` but based on the colors of the element 
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-The snippet requires a somewhat complex case of stacking contexts to get right, such that the pseudo-element
-will be positioned underneath the element itself while still being visible.
+Đoạn mã đòi hỏi một trường hợp phức tạp của ngữ cảnh xếp chồng lên để có được đúng, như vậy phần tử giả sẽ được đặt bên dưới chính nó trong khi vẫn hiển thị.
 
-1. `position: relative` on the parent establishes a Cartesian positioning context for child elements.
-2. `z-index: 1` establishes a new stacking context.
+1. `position: relative` thiết lập một bối cảnh định vị trên phần tử cha cho phần tử con.
+2. `z-index: 1` thiết lập một ngữ cảnh xếp chồng mới.
 3. `position: relative` on the child establishes a positioning context for pseudo-elements.
 4. `::after` defines a pseudo-element.
 5. `position: absolute` takes the pseudo element out of the flow of the document and positions it in relation to the parent.
