@@ -772,27 +772,27 @@ Tạo một bóng tối tương tự như `box-shadow` nhưng dựa trên màu s
 
 1. `position: relative` thiết lập một bối cảnh định vị trên phần tử cha cho phần tử con.
 2. `z-index: 1` thiết lập một ngữ cảnh xếp chồng mới.
-3. `position: relative` on the child establishes a positioning context for pseudo-elements.
-4. `::after` defines a pseudo-element.
-5. `position: absolute` takes the pseudo element out of the flow of the document and positions it in relation to the parent.
-6. `width: 100%` and `height: 100%` sizes the pseudo-element to fill its parent's dimensions, making it equal in size.
-7. `background: inherit` causes the pseudo-element to inherit the linear gradient specified on the element.
-8. `top: 0.5rem` offsets the pseudo-element down slightly from its parent.
-9. `filter: blur(0.4rem)` will blur the pseudo-element to create the appearance of a shadow underneath.
-10. `opacity: 0.7` makes the pseudo-element partially transparent.
-11. `z-index: -1` positions the pseudo-element behind the parent.
+3. `position: relative` trên phần tử con thiết lập một bối cảnh định vị cho các phần tử giả.
+4. `::after` đinh nghĩa một phần tử giả.
+5. `position: absolute` lấy phần tử giả ra khỏi flow của tài liệu và định vị nó trong quan hệ với phần tử cha.
+6. `width: 100%` và `height: 100%` kích thước các phần tử giả để lấp đầy kích thước phần tử cha, làm cho nó có kích thước bằng nhau.
+7. `background: inherit` làm cho các phần tử giả kế thừa các quy định linear gradient trên phần tử.
+8. `top: 0.5rem` độ lệch xuống của phần tử giả từ phần tử cha.
+9. `filter: blur(0.4rem)` sẽ làm mờ phần tử giả tạo ra sự xuất hiện của một cái bóng bên dưới.
+10. `opacity: 0.7` làm cho phần tử giả mang một phần trong suốt.
+11. `z-index: -1` định vị phần tử giả phía sau phần tử cha.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
-<span class="snippet__support-note">⚠️ Requires prefixes for full support.</span>
+<span class="snippet__support-note">⚠️ Yêu cầu tiền tố để được hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=css-filters
 
 <!-- tags: visual -->
 
-### Etched text
+### Văn bản nổi
 
-Creates an effect where text appears to be "etched" or engraved into the background.
+Tạo ra một hiệu ứng mà văn bản xuất hiện được "khắc" hoặc khắc vào nền.
 
 #### HTML
 
@@ -826,27 +826,24 @@ Creates an effect where text appears to be "etched" or engraved into the backgro
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-`text-shadow: 0 2px white` creates a white shadow offset `0px` horizontally and `2px` vertically
-from the origin position.
+`text-shadow: 0 2px white` tạo một bóng trắng lệch `0px` theo phương dọc và `2px` theo phương ngang.
 
-The background must be darker than the shadow for the effect to work.
+Nền phải tối hơn bóng để hiệu ứng có kết quả.
 
-The text color should be slightly faded to make it look like it's engraved/carved out
-of the background.
+Màu văn bản nên hơi nhạt dần để làm cho nó trông giống như nó được khắc / khắc ra nền.
 
-#### Browser support
-
-<span class="snippet__support-note">✅ No caveats.</span>
+#### Hỗ trợ trình duyệt
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 * https://caniuse.com/#feat=css-textshadow
 
 <!-- tags: visual -->
 
-### Gradient text
+### Văn bản gradient
 
-Gives text a gradient color.
+Cho một văn bản gradient.
 
 #### HTML
 
@@ -883,25 +880,24 @@ Gives text a gradient color.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `background: -webkit-linear-gradient(...)` gives the text element a gradient background.
-2. `webkit-text-fill-color: transparent` fills the text with a transparent color.
+1. `background: -webkit-linear-gradient(...)` cung cấp cho các phần tử văn bản một nền gradient.
+2. `webkit-text-fill-color: transparent` lấp đầy văn bản với màu trong suốt.
 3. `webkit-background-clip: text` clips the background with the text, filling the text with
    the gradient background as the color.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Uses non-standard properties.</span>
+<span class="snippet__support-note">⚠️ Sử dụng thuộc tính không chuẩn</span>
 
 * https://caniuse.com/#feat=text-stroke
 
 <!-- tags: visual -->
 
-### Hairline border
+### ĐƯờng vằn
 
-Gives an element a border equal to 1 native device pixel in width, which can look
-very sharp and crisp.
+Cung cấp cho một phần tử một đường viền bằng 1 pixel, có thể trông rất sắc nét.
 
 #### HTML
 
@@ -965,13 +961,13 @@ very sharp and crisp.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `box-shadow`, when only using spread, adds a pseudo-border which can use subpixels\*.
-2. Use `@media (min-resolution: ...)` to check the device pixel ratio (`1dppx` equals 96 DPI),
-   setting the spread of the `box-shadow` equal to `1 / dppx`.
+1. `box-shadow`, khi chỉ sử dụng spread, athêm một biên giả có thể sử sụng pixels âm\*.
+2. Sử dụng `@media (min-resolution: ...)` để kiểm tra tỉ lệ thiết bị (`1dppx` bằng 96 DPI),
+   cài đặt spread của `box-shadow` bằng `1 / dppx`.
 
-#### Browser Support
+#### Trình duyệt hỗ trợ
 
 <span class="snippet__support-note">⚠️ Needs alternate syntax and JavaScript user agent checking for full support.</span>
 
@@ -980,13 +976,13 @@ very sharp and crisp.
 
 <hr>
 
-\*Chrome does not support subpixel values on `border`. Safari does not support subpixel values on `box-shadow`. Firefox supports subpixel values on both.
+\*Chrome không hỗ trợ các giá trị pixel âm trên `border`. Safari không hỗ trợ các giá trị pixel âm trên `box-shadow`. Firefox không hỗ trợ các giá trị pixel âm trên cả hai.
 
 <!-- tags: visual -->
 
-### Overflow scroll gradient
+### cuộn tràn gradient
 
-Adds a fading gradient to an overflowing element to better indicate there is more content to be scrolled.
+Thêm một gradient mờ dần cho một phần tử tràn để biểu thị tốt hơn có nhiều nội dung cần được cuộn lại.
 
 #### HTML
 
@@ -1065,7 +1061,7 @@ Adds a fading gradient to an overflowing element to better indicate there is mor
 document.querySelector('.snippet-demo__overflow-scroll-gradient__scroller').innerHTML = 'content '.repeat(100)
 </script>
 
-#### Explanation
+#### Giải thích
 
 1. `position: relative` on the parent establishes a Cartesian positioning context for pseudo-elements.
 2. `::after` defines a pseudo element.
