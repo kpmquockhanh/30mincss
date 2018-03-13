@@ -1063,29 +1063,28 @@ document.querySelector('.snippet-demo__overflow-scroll-gradient__scroller').inne
 
 #### Giải thích
 
-1. `position: relative` on the parent establishes a Cartesian positioning context for pseudo-elements.
-2. `::after` defines a pseudo element.
-3. `background-image: linear-gradient(...)` adds a linear gradient that fades from transparent to white
-   (top to bottom).
-4. `position: absolute` takes the pseudo element out of the flow of the document and positions it in relation to the parent.
-5. `width: 240px` matches the size of the scrolling element (which is a child of the parent that has
-   the pseudo element).
-6. `height: 25px` is the height of the fading gradient pseudo-element, which should be kept relatively small.
-7. `bottom: 0` positions the pseudo-element at the bottom of the parent.
-8. `pointer-events: none` specifies that the pseudo-element cannot be a target of mouse events, allowing text behind it to still be selectable/interactive.
+1. `position: relative` trên phần tử con thiết lập một bối cảnh định vị cho các phần tử giả.
+2. `::after` định nghĩa một phần tử giả.
+3. `background-image: linear-gradient(...)` thêm một linear gradient mờ dần từ trong suốt đến trắng
+   (từ trên xuống dưới).
+4. `position: absolute` lấy phần tử giả ra khỏi flow của doc và định vị nó trong quan hệ với phần tử cha.
+5. `width: 240px` trùng với kích thước của phần tử cuộn (là một phaatf tử con của phần tử cha có phần tử giả).??:D??
+6. `height: 25px` là height của phần tử giả có gradient mờ dần, which should be kept relatively small.
+7. `bottom: 0` định vị phần tử giả ở dưới cùng của phần tử cha.
+8. `pointer-events: none` xác định rằng phần tử giả không thể là một đích của mouse event, cho phép văn bản đằng sau nó vẫn có thể được lựa chọn / tương tác
 
-#### Browser support
+#### hỗ trợ trình duyệt
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Không có gì.</span>
 
 * https://caniuse.com/#feat=css-gradients
 
 <!-- tags: visual -->
 
-### Pretty text underline
+### Gạch chân văn bản
 
-A nicer alternative to `text-decoration: underline` where descenders do not clip the underline.
-Natively implemented as `text-decoration-skip-ink: auto` but it has less control over the underline.
+Một sự thay thế đẹp hơn cho `text-decoration: underline` nơi mà các dấu chấm chấm không gạch dưới.
+Được thực hiện như là `text-decoration-skip-ink: auto` nhưng khó kiểm soát hơn.
 
 #### HTML
 
@@ -1148,18 +1147,14 @@ Natively implemented as `text-decoration-skip-ink: auto` but it has less control
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `text-shadow: ...` has 4 values with offsets that cover a 4x4 px area to ensure the underline
-   has a "thick" shadow that covers the line where descenders clip it. Use a color
-   that matches the background. For a larger font, use a larger `px` size.
-2. `background-image: linear-gradient(...)` creates a 90deg gradient with the current
-   text color (`currentColor`).
-3. The `background-*` properties size the gradient as 1x1px at the bottom and repeats it along the x-axis.
-4. The `::selection` pseudo selector ensures the text shadow does not interfere with text
-   selection.
+1. `text-shadow: ...` có 4 giá trị bù lại nó bao phủ một khu vực 4x4 để đảm bảo có một 'thick' shadow bao phủ dòng nơi mà kết thúc. Sử dụng một màu trùng với màu nền. Cho font chữ lớn, sử sụng `px` lớn.
+2. `background-image: linear-gradient(...)` tạo một  gradient 90 độ so với màu chữ hiện tại(`currentColor`).
+3. `background-*` các thuộc tính có kích thước gradient  1x1px ở phía dưới và lặp lại nó dọc theo trục x.
+4. The `::selection` selector giả đảm bảo bóng văn bản không ảnh hưởng đến việc lựa chọn văn bản.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
 <span class="snippet__support-note">⚠️ The distance of the underline from the text depends on the internal metrics of a font, so you must ensure everyone sees the same font (i.e. no system fonts which will change based on the OS).</span>
 
@@ -1168,9 +1163,9 @@ Natively implemented as `text-decoration-skip-ink: auto` but it has less control
 
 <!-- tags: visual -->
 
-### Reset all styles
+### Reset tất cả style
 
-Resets all styles to default values with one property. This will not affect `direction` and `unicode-bidi` properties.
+Đặt lại tất cả các style thành các giá trị mặc định với một thuộc tính.Cái này sẽ không ảnh hưởng đến thuộc tính `direction` và `unicode-bidi` .
 
 #### HTML
 
@@ -1204,11 +1199,11 @@ Resets all styles to default values with one property. This will not affect `dir
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-The `all` property allows you to reset all styles (inherited or not) to default values.
+Thuộc tính `all` cho phép bạn cài đặt lại tất cả các style (kế thừa hay không) thành giá trị mặc định.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
 <span class="snippet__support-note">⚠️ MS Edge status is under consideration.</span>
 
@@ -1216,9 +1211,9 @@ The `all` property allows you to reset all styles (inherited or not) to default 
 
 <!-- tags: visual -->
 
-### Shape separator
+### Tách hình khối
 
-Uses an SVG shape to separate two different blocks to create more a interesting visual appearance compared to standard horizontal separation.
+Sử dụng một hình dạng SVG để tách hai khối khác nhau để tạo ra một hình ảnh thú vị hơn so với sự phân chia ngang bình thường.
 
 #### HTML
 
@@ -1266,19 +1261,17 @@ Uses an SVG shape to separate two different blocks to create more a interesting 
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `position: relative` on the element establishes a Cartesian positioning context for pseudo elements.
-2. `::after` defines a pseudo element.
-3. `background-image: url(...)` adds the SVG shape (a 24x24 triangle in base64 format) as the background image
-   of the pseudo element, which repeats by default. It must be the same color as the block that is being
-   separated.
-4. `position: absolute` takes the pseudo element out of the flow of the document and positions it in relation to the parent.
-5. `width: 100%` ensures the element stretches the entire width of its parent.
-6. `height: 24px` is the same height as the shape.
-7. `bottom: 0` positions the pseudo element at the bottom of the parent.
+1. `position: relative` trên phần tử con thiết lập một bối cảnh định vị cho các phần tử giả.
+2. `::after` định nghĩa một phần tử giả.
+3. `background-image: url(...)` thêm SVG shape (một tam giác 24x24 theo định dạng base64) như là ảnh nền của phần tử giả, cái mà mặc định là lặp lại. Nó phải cùng màu với khối được chia.
+4. `position: absolute` lấy phần tử giả ra khỏi flow của doc và định vị nó trong quan hệ với phần tử cha.
+5. `width: 100%` đảm bảo phần tử trải dài toàn bộ chiều rộng của phần tử cha.
+6. `height: 24px` cùng chiều cao với shape.
+7. `bottom: 0` định vị phần tử giả ở dưới cùng của phần tử cha.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
 <span class="snippet__support-note">✅ No caveats.</span>
 
@@ -1286,9 +1279,9 @@ Uses an SVG shape to separate two different blocks to create more a interesting 
 
 <!-- tags: visual -->
 
-### System font stack
+### Stack font hệ thống
 
-Uses the native font of the operating system to get close to a native app feel.
+ử dụng phông chữ bản địa của hệ điều hành để có được cảm nhận gần giống với ứng dụng gốc.
 
 #### HTML
 
@@ -1317,7 +1310,7 @@ Uses the native font of the operating system to get close to a native app feel.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 The browser looks for each successive font, preferring the first one if possible, and
 falls back to the next if it cannot find the font (on the system or defined in CSS).
