@@ -330,9 +330,9 @@ Căn giữa theo chiều ngang và dọc phần tử con bên trong phần tử 
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-1. `display: grid` cho phép flexbox.
+1. `display: grid` cho phép grid.
 2. `justify-content: center` căn giữa phần tử con theo chiều dọc.
 3. `align-items: center` căn giữa phần tử con theo chiều ngang.
 
@@ -497,8 +497,7 @@ Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết
 
 1. `overflow: hidden` ngăn văn bản tràn lên kích thước của nó (đối với block, 100% width và auto height).
 2. `white-space: nowrap` ngăn văn bản vượt quá một chiều cao.
-3. `text-overflow: ellipsis` makes it so that if the text exceeds its dimensions, it
-   will end with an ellipsis.
+3. `text-overflow: ellipsis` làm nó kết thức bởi dấu chấm lửng nếu văn bản vượt quá kích thước của nó.
 4. `width: 200px;` đảm bảo rằng phần tử có một kích thước, để biết khi nào cần dấu chấm phẩy.
 
 #### Trình duyệt hỗ trợ
