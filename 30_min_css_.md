@@ -37,7 +37,7 @@ html {
 #### Giải thích
 
 1. `box-sizing: border-box` làm cho việc bổ sung `padding` or `border`s không ảnh hưởng tới các `width` hay `height` của các phần tử.
-2. `box-sizing: inherit` làm cho một element tôn trọng quy tắc `box-sizing` của cha nó.
+2. `box-sizing: inherit` làm cho một element ~~tôn trọng~~ (inherit) **kế thừa** quy tắc `box-sizing` của cha nó.
 
 #### Hỗ trợ trình duyệt
 
@@ -52,7 +52,7 @@ html {
 Ensures that an element self-clears its children.
 Đảm bảo rằng một phần tử tự clear con của nó.
 
-###### Lưu ý: Tiều này chỉ hữu ích nếu bạn vẫn đang sử dụng float để xây dựng layout. Hãy xem xét sử dụng một phương pháp hiện đại với flexbox hoặc grid.
+###### Lưu ý: ~~Tiều~~ Điều này chỉ hữu ích nếu bạn vẫn đang sử dụng float để xây dựng layout. Hãy xem xét sử dụng một phương pháp hiện đại với flexbox hoặc grid.
 
 #### HTML
 
@@ -104,7 +104,7 @@ Ensures that an element self-clears its children.
 
 1. `.clearfix::after` định nghĩa một element giả.
 2. `content: ''` cho phép các element giả để ảnh hưởng đến layout.
-3. `clear: both` chỉ ra rằng phía trái, phải hoặc cả 2 phía của phần tử không thẻ được lền kề phần tử đã float  mà không cùng một bối cảnh format block._(nghe hơi chuối :|)_
+3. `clear: both` chỉ ra rằng phía trái, phải hoặc cả 2 phía của phần tử không thẻ được lền kề phần tử đã float  mà không cùng ~~một bối cảnh format block._(nghe hơi chuối :|)_~~ ( the same block formatting context) **1 khối định dạng**
 
 #### Hỗ trợ trình duyệt
 
@@ -346,7 +346,7 @@ Căn giữa theo chiều ngang và dọc phần tử con bên trong phần tử 
 
 ### Layout grid
 
-Website cơ bản sử dụng `grid`.
+~~Website cơ bản~~ (Basic website layout) **Bố cục website cơ bản** sử dụng `grid`.
 
 #### HTML
 
@@ -456,7 +456,7 @@ Website cơ bản sử dụng `grid`.
 
 ### Cắt bớt văn bản
 
-Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết thúc bằng một dấu chấm phẩy `…`.
+Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết thúc bằng một ~~dấu chấm phẩy~~(ellipsis) **dấu chấm lửng** `…`.
 
 #### HTML
 
@@ -497,8 +497,8 @@ Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết
 
 1. `overflow: hidden` ngăn văn bản tràn lên kích thước của nó (đối với block, 100% width và auto height).
 2. `white-space: nowrap` ngăn văn bản vượt quá một chiều cao.
-3. `text-overflow: ellipsis` makes it so that if the text exceeds its dimensions, it
-   will end with an ellipsis.
+3. `text-overflow: ellipsis` ~~makes it so that if the text exceeds its dimensions, it
+   will end with an ellipsis.~~ ** làm nó kết thúc với dấu chẩm lửng khi text vượt quá kích thước.**
 4. `width: 200px;` đảm bảo rằng phần tử có một kích thước, để biết khi nào cần dấu chấm phẩy.
 
 #### Trình duyệt hỗ trợ
@@ -549,7 +549,7 @@ Tạo hình tròn với thuần CSS.
 
 `border-radius: 50%` bẻ cong viền của một phần tử để tạo ra một vòng tròn.
 
-Vì một vòng tròn có cùng bán kính tại bất kỳ điểm cho trước, `width` và `height` phải gioongsn hau. Các giá trị khác nhau sẽ tạo ra một hình elip.
+Vì một vòng tròn có cùng bán kính tại bất kỳ điểm cho trước, `width` và `height` phải ~~gioongsn hau~~ **giống nhau**. Các giá trị khác nhau sẽ tạo ra một hình elip.
 
 #### Browser support
 
@@ -638,7 +638,7 @@ Có rất nhiều yếu tố giả khác mà bạn có thể sử dụng để t
 
 #### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">⚠️ Kiểu dáng thanh cuộn dường như không xuất hiện trên bất kỳ bài hát tiêu chuẩn nào.</span>
+<span class="snippet__support-note">⚠️ Kiểu dáng thanh cuộn dường như không xuất hiện trên bất kỳ ~~bài hát~~ (track) **đường** tiêu chuẩn nào.</span>
 
 * https://caniuse.com/#feat=css-scrollbar
 
@@ -646,7 +646,7 @@ Có rất nhiều yếu tố giả khác mà bạn có thể sử dụng để t
 
 ### Lựa chọn văn bản tùy chọn
 
-Thay đổi kiểu dáng của văn bản chọn lựa. ?????
+Thay đổi kiểu dáng của ~~văn bản chọn lựa~~ (text selection) **bộ chọn văn bản**. ?????
 
 #### HTML
 
@@ -686,7 +686,7 @@ Thay đổi kiểu dáng của văn bản chọn lựa. ?????
 
 #### Giải thích
 
-`::selection` đhịnh nghĩa một selector giả trên một phần tử định kiểu văn bản bên trong nó khi được chọn. Lưu ý rằng nếu bạn không kết hợp bất kỳ selector khác, style của bạn sẽ được áp dụng ở cấp gốc, cho bất kỳ phần tử có thể lựa chọn nào.
+`::selection` ~~đhịnh~~ **định** nghĩa một selector giả trên một phần tử định kiểu văn bản bên trong nó khi được chọn. Lưu ý rằng nếu bạn không kết hợp bất kỳ selector khác, style của bạn sẽ được áp dụng ở cấp gốc, cho bất kỳ phần tử có thể lựa chọn nào.
 
 #### Trình duyệt hỗ trợ
 
@@ -884,8 +884,8 @@ Cho một văn bản gradient.
 
 1. `background: -webkit-linear-gradient(...)` cung cấp cho các phần tử văn bản một nền gradient.
 2. `webkit-text-fill-color: transparent` lấp đầy văn bản với màu trong suốt.
-3. `webkit-background-clip: text` clips the background with the text, filling the text with
-   the gradient background as the color.
+3. `webkit-background-clip: text` ~~clips the background with the text, filling the text with
+   the gradient background as the color.~~ **clip nền với văn bản, điền vào các văn bản với nền gradient như màu sắc**
 
 #### Trình duyệt hỗ trợ
 
