@@ -1,6 +1,6 @@
 ### Reset box-sizing
 
-Reset box-model để `width`s và `height`s không bị ảnh hưởng bởi `border`s hay `padding` của chúng.
+Reset box-model để `width` và `height` không bị ảnh hưởng bởi `border`s hay `padding` của chúng.
 
 #### CSS
 
