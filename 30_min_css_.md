@@ -1312,28 +1312,27 @@ Sử dụng một hình dạng SVG để tách hai khối khác nhau để tạo
 
 #### Giải thích
 
-The browser looks for each successive font, preferring the first one if possible, and
-falls back to the next if it cannot find the font (on the system or defined in CSS).
+Trình duyệt tìm kiếm từng phông chữ, ưu tiên cái đầu tiên nếu khả thi, và quay trở lại font tiếp theo nếu nó không thể tìm thấy phông chữ (trên hệ thống hoặc được định nghĩa trong CSS).
 
-1. `-apple-system` is San Francisco, used on iOS and macOS (not Chrome however)
-2. `BlinkMacSystemFont` is San Francisco, used on macOS Chrome
-3. `Segoe UI` is used on Windows 10
-4. `Roboto` is used on Android
-5. `Oxygen-Sans` is used on GNU+Linux
-6. `Ubuntu` is used on Linux
-7. `"Helvetica Neue"` and `Helvetica` is used on macOS 10.10 and below (wrapped in quotes because it has a space)
-8. `Arial` is a font widely supported by all operating systems
-9. `sans-serif` is the fallback sans-serif font if none of the other fonts are supported
+1. `-apple-system` là San Francisco, được sử dụng trên iOS và macOS (  tuy nhiên không có trên Chrome)
+2. `BlinkMacSystemFont` là San Francisco, được sử dụng trên macOS Chrome
+3. `Segoe UI` được sử dụng trên Windows 10
+4. `Roboto` được sử dụng trên Android
+5. `Oxygen-Sans` được sử dụng trên GNU+Linux
+6. `Ubuntu` được sử dụng trên Linux
+7. `"Helvetica Neue"` và`Helvetica` được sử dụng trên macOS 10.10 và thấp hơn (được bao bọc bởi dấu ngoặc kép bởi vì nó có một khoảng trắng)
+8. `Arial` là một phông chữ được hỗ trợ rộng rãi bởi tất cả các hệ điều hành
+9. `sans-serif` là phông chữ dự phòng nếu không có phông chữ nào được hỗ trợ
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
 <span class="snippet__support-note">✅ No caveats.</span>
 
 <!-- tags: visual -->
 
-### Triangle
+### Tam giác
 
-Creates a triangle shape with pure CSS.
+Tạo một tam giác với thuần CSS.
 
 #### HTML
 
@@ -1409,17 +1408,15 @@ Creates a triangle shape with pure CSS.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-[View this link for a detailed explanation.](https://stackoverflow.com/q/7073484)
+[Xem link giải thích chi tiết.](https://stackoverflow.com/q/7073484)
 
-The color of the border is the color of the triangle. The side the triangle tip points
-corresponds to the opposite `border-*` property. For example, a color on `border-top`
-means the arrow points downward.
+Màu của đường viền là màu của tam giác. Đỉnh tam giác tương ứng với thuộc tính `border-*`. Ví dụ: màu trên đường biên giới hạn mũi tên xuống.
 
-Experiment with the `px` values to change the proportion of the triangle.
+Thử với các giá trị px để thay đổi tỷ lệ tam giác.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
 <span class="snippet__support-note">✅ No caveats.</span>
 
@@ -1427,7 +1424,7 @@ Experiment with the `px` values to change the proportion of the triangle.
 
 ### Bouncing loader
 
-Creates a bouncing loader animation.
+Tạo một chuyển động bouncing loader.
 
 #### HTML
 
@@ -1513,27 +1510,27 @@ Creates a bouncing loader animation.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-Note: `1rem` is usually `16px`.
+Note: `1rem` thường là `16px`.
 
-1. `@keyframes` defines an animation that has two states, where the element changes `opacity` and is translated up on the 2D plane using `transform: translateY()`.
+1. `@keyframes` định nghĩa một chuyển động có hai trạng thái, nơi phần tử thay đổi `opacity` và được dịch lên trên mặt phẳng 2D sử dụng `transform: translateY()`.
 
-2. `.bouncing-loader` is the parent container of the bouncing circles and uses `display: flex`
-   and `justify-content: center` to position them in the center.
+2. `.bouncing-loader` là container cha của bóng tròn và sử dụng  `display: flex`
+   và  `justify-content: center` để đặt chúng ở giữa.
 
-3. `.bouncing-loader > div`, targets the three child `div`s of the parent to be styled. The `div`s are given a width and height of `1rem`, using `border-radius: 50%` to turn them from squares to circles.
+3. `.bouncing-loader > div`, nhắm tới 3 thẻ `div` con của phần tử cha được định kiểu. `div` được cho một chiều rộng và chiều cao là `1rem`, sử dụng  `border-radius: 50%` để bo tròn cạnh.
 
-4. `margin: 3rem 0.2rem` specifies that each circle has a top/bottom margin of `3rem` and left/right margin
-   of `0.2rem` so that they do not directly touch each other, giving them some breathing room.
+4. `margin: 3rem 0.2rem` xác định mỗi vòng tròn có margin top/bottom là  `3rem` và margin left/right 
+   là  `0.2rem` để chúng không chạm vào nhau, cho chúng một khoảng trống.
 
-5. `animation` is a shorthand property for the various animation properties: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction` are used.
+5. `animation` là một thuộc tính viết tắt cho các thuộc tính animation khác nhau: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction` được sử dụng.
 
-6. `nth-child(n)` targets the element which is the nth child of its parent.
+6. `nth-child(n)` nhắm mục tiêu đến phần tử thứ n của phần tử cha của nó.
 
-7. `animation-delay` is used on the second and third `div` respectively, so that each element does not start the animation at the same time.
+7. `animation-delay` được sử dụng trên thẻ thứ 2 và 3 tương ứng  `div`, để mỗi phần tử không bắt đầu chuyển động cùng một lúc.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
 <span class="snippet__support-note">✅ No caveats.</span>
 
@@ -1543,7 +1540,7 @@ Note: `1rem` is usually `16px`.
 
 ### Donut spinner
 
-Creates a donut spinner that can be used to indicate the loading of content.
+Tạo một Donut spinner có thể được sử dụng để chỉ việc tải nội dung.
 
 #### HTML
 
@@ -1595,24 +1592,22 @@ Creates a donut spinner that can be used to indicate the loading of content.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
-Use a semi-transparent `border` for the whole element, except one side that will
-serve as the loading indicator for the donut. Use `animation` to rotate the element.
+Use a semi-transparent `border` cho toàn bộ phần tử, ngoại trừ một bên sẽ đóng vai trò như là chỉ số tải cho donut. Sử dụng `animation` để xuay phần tử.
 
-#### Browser support
+#### Hỗ trợ trình duyệt
 
-<span class="snippet__support-note">⚠️ Requires prefixes for full support.</span>
+<span class="snippet__support-note">⚠️ Yêu cầu tiền tố để được hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=css-animation
 * https://caniuse.com/#feat=transforms2d
 
 <!-- tags: animation -->
 
-### Easing variables
+### Biến giảm dần
 
-Variables that can be reused for `transition-timing-function` properties, more
-powerful than the built-in `ease`, `ease-in`, `ease-out` and `ease-in-out`.
+Biến này được sử dụng cho thuộc tính `transition-timing-function`, mạnh hơn tích các hợp sẵn `ease`, `ease-in`, `ease-out` and `ease-in-out`.
 
 #### HTML
 
@@ -1706,7 +1701,7 @@ powerful than the built-in `ease`, `ease-in`, `ease-out` and `ease-in-out`.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 The variables are defined globally within the `:root` CSS pseudo-class which matches the root element of a tree representing the document. In HTML, `:root` represents the `<html>` element and is identical to the selector `html`, except that its specificity is higher.
 
