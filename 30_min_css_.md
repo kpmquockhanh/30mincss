@@ -37,7 +37,7 @@ html {
 #### Giải thích
 
 1. `box-sizing: border-box` làm cho việc bổ sung `padding` or `border`s không ảnh hưởng tới các `width` hay `height` của các phần tử.
-2. `box-sizing: inherit` làm cho một element tôn trọng quy tắc `box-sizing` của cha nó.
+2. `box-sizing: inherit` làm cho một element ~~tôn trọng~~ (inherit) **kế thừa** quy tắc `box-sizing` của cha nó.
 
 #### Hỗ trợ trình duyệt
 
@@ -102,8 +102,8 @@ Ensures that an element self-clears its children.
 
 #### Giải thích
 
-1. `.clearfix::after` định nghĩa một element giả.
-2. `content: ''` cho phép các element giả để ảnh hưởng đến layout.
+1. `.clearfix::after` định nghĩa một ~~element giả.~~ ( pseudo-element ) **thành phần giả định**
+2. `content: ''` cho phép các ~~element giả.~~ ( pseudo-element ) **thành phần giả định** để ảnh hưởng đến layout.
 3. `clear: both` chỉ ra rằng phía trái, phải hoặc cả 2 phía của phần tử không thẻ được lền kề phần tử đã float  mà không cùng một bối cảnh format block._(nghe hơi chuối :|)_
 
 #### Hỗ trợ trình duyệt
@@ -346,7 +346,7 @@ Căn giữa theo chiều ngang và dọc phần tử con bên trong phần tử 
 
 ### Layout grid
 
-Website cơ bản sử dụng `grid`.
+~~Website cơ bản sử dụng `grid`. ~~ (Basic website layout using grid.) **Bố cục trang web cơ bản sử dụng `grid`  **  
 
 #### HTML
 
@@ -456,7 +456,7 @@ Website cơ bản sử dụng `grid`.
 
 ### Cắt bớt văn bản
 
-Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết thúc bằng một dấu chấm phẩy `…`.
+Nếu văn bản dài hơn một dòng, nó sẽ được cắt ngắn và kết thúc bằng một dấu ~~chấm phẩy `…`.~~ **dấu chấm lửng (dấu ba chấm)**  
 
 #### HTML
 
@@ -548,7 +548,7 @@ Tạo hình tròn với thuần CSS.
 
 `border-radius: 50%` bẻ cong viền của một phần tử để tạo ra một vòng tròn.
 
-Vì một vòng tròn có cùng bán kính tại bất kỳ điểm cho trước, `width` và `height` phải gioongsn hau. Các giá trị khác nhau sẽ tạo ra một hình elip.
+Vì một vòng tròn có cùng bán kính tại bất kỳ điểm cho trước, `width` và `height` phải ~~gioongsn hau.~~ **như nhau** Các giá trị khác nhau sẽ tạo ra một hình elip.
 
 #### Browser support
 
@@ -645,7 +645,7 @@ Có rất nhiều yếu tố giả khác mà bạn có thể sử dụng để t
 
 ### Lựa chọn văn bản tùy chọn
 
-Thay đổi kiểu dáng của văn bản chọn lựa. ?????
+Thay đổi kiểu dáng của **văn bản chọn lựa.** (text selector) **Bộ chọn văn bản** ?????
 
 #### HTML
 
@@ -884,7 +884,7 @@ Cho một văn bản gradient.
 1. `background: -webkit-linear-gradient(...)` cung cấp cho các phần tử văn bản một nền gradient.
 2. `webkit-text-fill-color: transparent` lấp đầy văn bản với màu trong suốt.
 3. `webkit-background-clip: text` clips the background with the text, filling the text with
-   the gradient background as the color.
+   the gradient background as the color. **clips nền với văn bản, điền văn bản với nền dốc như là màu sắc  **  
 
 #### Trình duyệt hỗ trợ
 
